@@ -12,6 +12,7 @@ private let size: CGFloat = 100
 extension UIView {
     
     func moveBoxSet(superview: UIView, view: UIImageView) {
+        view.isUserInteractionEnabled = true
         superview.addSubview(view)
         
         NSLayoutConstraint.activate([
