@@ -7,11 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MoveBoxVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        configureUI()
+    }
+    
+    private func configureUI() {
+        view.backgroundColor = .white
     }
 
 
