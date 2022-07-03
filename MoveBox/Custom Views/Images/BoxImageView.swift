@@ -19,7 +19,7 @@ class BoxImageView: UIImageView {
     }
     
     private func configure() {
-        image = UIImage(systemName: Constants.image)
+        image = SFSymbols.boxImage
         contentMode = .scaleAspectFit
         translatesAutoresizingMaskIntoConstraints = false
     }

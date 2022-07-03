@@ -24,7 +24,7 @@ class MoveBoxVC: UIViewController {
     }
     
     private func configureUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .secondarySystemBackground
         view.moveBoxSet(superview: view, view: boxView)
         boxView.addGestureRecognizer(panRecognizer)
     }
@@ -32,18 +32,15 @@ class MoveBoxVC: UIViewController {
     @objc func handlePan(recognizer: UIPanGestureRecognizer) {
         guard let piece = recognizer.view else { return }
         let translation = recognizer.translation(in: piece.superview)
-        let velocity = recognizer.velocity(in: piece.superview)
         
         switch recognizer.state {
         case .began:
-            print("began translation \(translation) , \(velocity)")
             initialCenter = piece.center
         case .changed:
-            print("changed translation \(translation) , \(velocity)")
             let newCenter = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
             piece.center = newCenter
         case .ended:
-            print("ended translation \(translation) , \(velocity)")
+            print("ended translation \(translation)")
         default:
             break
         }
