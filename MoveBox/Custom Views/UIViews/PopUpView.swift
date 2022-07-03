@@ -22,7 +22,7 @@ class PopUpView: UIView {
     
     private func configure() {
         backgroundColor = .systemPink
-        translatesAutoresizingMaskIntoConstraints = false
+        setPopUpImage(view: self, image: popUpImage)
     }
     
 }

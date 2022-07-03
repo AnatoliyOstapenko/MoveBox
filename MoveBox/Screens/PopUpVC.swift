@@ -11,47 +11,36 @@ enum State { case open, closed }
 
 class PopUpVC: UIViewController {
     
-    private var bottomConstraint = NSLayoutConstraint()
-    private var currentState: State = .closed
-    
-    private lazy var popUpView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .systemPink
-        return view
-    }()
+    let popUpView = PopUpView(frame: .zero)
     
     private lazy var tapRecognizer: UITapGestureRecognizer = {
         let tap = UITapGestureRecognizer(target: self, action: #selector(popUpViewTapped(recognizer:)))
         return tap
     }()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configure()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setPopUpView()
+        configure()
     }
     
     private func configure() {
         view.backgroundColor = .secondarySystemBackground
+        view.setPopUpView(superView: view, popUpView: popUpView, recognizer: tapRecognizer)
     }
     
-    func setPopUpView() {
-        view.addSubview(popUpView)
-        popUpView.addGestureRecognizer(tapRecognizer)
-        bottomConstraint = popUpView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 440)
-        popUpView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            popUpView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            popUpView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bottomConstraint,
-            popUpView.heightAnchor.constraint(equalToConstant: 600)
-        ])
-    }
+//    func setPopUpView() {
+//        view.addSubview(popUpView)
+//        popUpView.addGestureRecognizer(tapRecognizer)
+//        bottomConstraint = popUpView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 440)
+//        popUpView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        NSLayoutConstraint.activate([
+//            popUpView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+//            popUpView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            bottomConstraint,
+//            popUpView.heightAnchor.constraint(equalToConstant: 600)
+//        ])
+//    }
     
     @objc private func popUpViewTapped(recognizer: UITapGestureRecognizer) {
         guard recognizer.view != nil else { return }
