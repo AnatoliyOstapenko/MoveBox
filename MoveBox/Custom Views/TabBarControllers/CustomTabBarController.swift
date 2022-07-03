@@ -10,7 +10,6 @@ import UIKit
 class CustomTabBarController: UITabBarController {
     
     let moveBoxImageVeiw = BoxImageView(frame: .zero)
-    let popUpImageView = PopUpImageView(frame: .zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +30,7 @@ class CustomTabBarController: UITabBarController {
     private func createRightNV()  -> UINavigationController {
         let vc  = PopUpVC()
         vc.title = TabBarTitles.popUp
-        vc.tabBarItem = UITabBarItem(title: TabBarTitles.popUp, image: popUpImageView.image, tag: 1)
+        vc.tabBarItem = UITabBarItem(title: TabBarTitles.popUp, image: moveBoxImageVeiw.image, tag: 1)
         return UINavigationController(rootViewController: vc)
     }
   
