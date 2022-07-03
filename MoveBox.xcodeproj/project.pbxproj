@@ -13,11 +13,10 @@
 		BCD2DD3C2870A414007889E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD2DD3B2870A414007889E6 /* Assets.xcassets */; };
 		BCD2DD3F2870A414007889E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD2DD3D2870A414007889E6 /* LaunchScreen.storyboard */; };
 		BCD2DD472870A905007889E6 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD462870A905007889E6 /* UIView+Ext.swift */; };
-		BCD2DD492870AACA007889E6 /* BoxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD482870AACA007889E6 /* BoxImageView.swift */; };
+		BCD2DD492870AACA007889E6 /* GenericImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD482870AACA007889E6 /* GenericImageView.swift */; };
 		BCD2DD4B2870AAF1007889E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD4A2870AAF1007889E6 /* Constants.swift */; };
 		BCD2DD4F2871C588007889E6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD4E2871C588007889E6 /* CustomTabBarController.swift */; };
 		BCD2DD512871C66C007889E6 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD502871C66C007889E6 /* PopUpVC.swift */; };
-		BCD2DD532871CF90007889E6 /* PopUpImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD522871CF90007889E6 /* PopUpImageView.swift */; };
 		BCD2DD5C2871E657007889E6 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD5B2871E657007889E6 /* PopUpView.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,11 +29,10 @@
 		BCD2DD3E2870A414007889E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCD2DD402870A414007889E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCD2DD462870A905007889E6 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
-		BCD2DD482870AACA007889E6 /* BoxImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxImageView.swift; sourceTree = "<group>"; };
+		BCD2DD482870AACA007889E6 /* GenericImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericImageView.swift; sourceTree = "<group>"; };
 		BCD2DD4A2870AAF1007889E6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BCD2DD4E2871C588007889E6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		BCD2DD502871C66C007889E6 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
-		BCD2DD522871CF90007889E6 /* PopUpImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpImageView.swift; sourceTree = "<group>"; };
 		BCD2DD5B2871E657007889E6 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,8 +109,7 @@
 		BCD2DD572871D3C8007889E6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				BCD2DD482870AACA007889E6 /* BoxImageView.swift */,
-				BCD2DD522871CF90007889E6 /* PopUpImageView.swift */,
+				BCD2DD482870AACA007889E6 /* GenericImageView.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -221,12 +218,11 @@
 			files = (
 				BCD2DD472870A905007889E6 /* UIView+Ext.swift in Sources */,
 				BCD2DD4F2871C588007889E6 /* CustomTabBarController.swift in Sources */,
-				BCD2DD492870AACA007889E6 /* BoxImageView.swift in Sources */,
+				BCD2DD492870AACA007889E6 /* GenericImageView.swift in Sources */,
 				BCD2DD372870A412007889E6 /* MoveBoxVC.swift in Sources */,
 				BCD2DD332870A412007889E6 /* AppDelegate.swift in Sources */,
 				BCD2DD5C2871E657007889E6 /* PopUpView.swift in Sources */,
 				BCD2DD512871C66C007889E6 /* PopUpVC.swift in Sources */,
-				BCD2DD532871CF90007889E6 /* PopUpImageView.swift in Sources */,
 				BCD2DD352870A412007889E6 /* SceneDelegate.swift in Sources */,
 				BCD2DD4B2870AAF1007889E6 /* Constants.swift in Sources */,
 			);

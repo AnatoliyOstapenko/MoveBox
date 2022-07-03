@@ -9,7 +9,7 @@ import UIKit
 
 class MoveBoxVC: UIViewController {
     
-    var boxView = BoxImageView(frame: .zero)
+    var boxView = GenericImageView(image: .boxImage)
     var animator = UIViewPropertyAnimator()
     var initialCenter = CGPoint()
     

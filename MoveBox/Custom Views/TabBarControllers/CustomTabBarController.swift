@@ -9,7 +9,7 @@ import UIKit
 
 class CustomTabBarController: UITabBarController {
     
-    let moveBoxImageVeiw = BoxImageView(frame: .zero)
+    let moveBoxImageVeiw = GenericImageView(image: .boxImage)
 
     override func viewDidLoad() {
         super.viewDidLoad()
