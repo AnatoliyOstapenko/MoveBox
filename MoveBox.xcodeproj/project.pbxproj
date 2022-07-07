@@ -20,7 +20,7 @@
 		BCD2DD492870AACA007889E6 /* GenericImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD482870AACA007889E6 /* GenericImageView.swift */; };
 		BCD2DD4B2870AAF1007889E6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD4A2870AAF1007889E6 /* Constants.swift */; };
 		BCD2DD4F2871C588007889E6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD4E2871C588007889E6 /* CustomTabBarController.swift */; };
-		BCD2DD512871C66C007889E6 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD502871C66C007889E6 /* PopUpVC.swift */; };
+		BCD2DD512871C66C007889E6 /* UnlockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD502871C66C007889E6 /* UnlockVC.swift */; };
 		BCD2DD5C2871E657007889E6 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD5B2871E657007889E6 /* PopUpView.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		BCD2DD482870AACA007889E6 /* GenericImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericImageView.swift; sourceTree = "<group>"; };
 		BCD2DD4A2870AAF1007889E6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BCD2DD4E2871C588007889E6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
-		BCD2DD502871C66C007889E6 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
+		BCD2DD502871C66C007889E6 /* UnlockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockVC.swift; sourceTree = "<group>"; };
 		BCD2DD5B2871E657007889E6 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD2DD362870A412007889E6 /* MoveBoxVC.swift */,
-				BCD2DD502871C66C007889E6 /* PopUpVC.swift */,
+				BCD2DD502871C66C007889E6 /* UnlockVC.swift */,
 				BC0A213E2875A9DE0099E98F /* PublisherVC.swift */,
 				BC0A215028771E940099E98F /* KVObserving.swift */,
 			);
@@ -252,7 +252,7 @@
 				BCD2DD372870A412007889E6 /* MoveBoxVC.swift in Sources */,
 				BCD2DD332870A412007889E6 /* AppDelegate.swift in Sources */,
 				BCD2DD5C2871E657007889E6 /* PopUpView.swift in Sources */,
-				BCD2DD512871C66C007889E6 /* PopUpVC.swift in Sources */,
+				BCD2DD512871C66C007889E6 /* UnlockVC.swift in Sources */,
 				BC0A2153287724010099E98F /* User.swift in Sources */,
 				BC0A215128771E940099E98F /* KVObserving.swift in Sources */,
 				BCD2DD352870A412007889E6 /* SceneDelegate.swift in Sources */,

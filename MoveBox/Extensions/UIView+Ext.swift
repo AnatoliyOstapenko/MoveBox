@@ -34,27 +34,29 @@ extension UIView {
         NSLayoutConstraint.activate([
             image.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             image.topAnchor.constraint(equalTo: view.topAnchor, constant: 5),
-            image.heightAnchor.constraint(equalToConstant: size / 3),
-            image.widthAnchor.constraint(equalToConstant: size / 3)
+            image.heightAnchor.constraint(equalToConstant: size / 2),
+            image.widthAnchor.constraint(equalToConstant: size / 2)
             
         ])
     }
     
-    func setPopUpView(superView: UIView, popUpView: UIView, recognizer: UIPanGestureRecognizer) {
-        superView.addSubview(popUpView)
-        popUpView.addGestureRecognizer(recognizer)
-        popUpView.translatesAutoresizingMaskIntoConstraints = false
+    func setPopUpView(superView: UIView, view: UIView) {
+        view.isUserInteractionEnabled = true // user interaction doesn't work by default 🤯
+        view.backgroundColor = UIColor(white: 0, alpha: 0) // make view transparent
+        superView.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            popUpView.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
-            popUpView.trailingAnchor.constraint(equalTo: superView.trailingAnchor),
-            popUpView.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -80),
-            popUpView.heightAnchor.constraint(equalToConstant: 80)
+            view.centerXAnchor.constraint(equalTo: superView.centerXAnchor),
+            view.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -80),
+            view.heightAnchor.constraint(equalToConstant: 80),
+            view.widthAnchor.constraint(equalTo: view.heightAnchor)
         ])
     }
     
     func setLockImageView(superview: UIView, imageView: UIImageView) {
         superview.addSubview(imageView)
+        imageView.isUserInteractionEnabled = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([

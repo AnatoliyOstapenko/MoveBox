@@ -26,7 +26,7 @@ class CustomTabBarController: UITabBarController {
     }
     
     private func createRightNV()  -> UINavigationController {
-        let vc  = PopUpVC()
+        let vc  = UnlockVC()
         vc.title = TabBarTitles.popUp
         vc.tabBarItem = UITabBarItem(title: TabBarTitles.popUp, image: GenericImageView(image: .boxImage).image, tag: 2)
         return UINavigationController(rootViewController: vc)

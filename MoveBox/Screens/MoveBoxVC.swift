@@ -10,10 +10,8 @@ import UIKit
 class MoveBoxVC: UIViewController {
     
     var boxView = GenericImageView(image: .boxImage)
-    var animator = UIViewPropertyAnimator()
-    var initialCenter = CGPoint()
     
-    lazy var panRecognizer: UIPanGestureRecognizer = {
+    private lazy var panRecognizer: UIPanGestureRecognizer = {
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan(recognizer:)))
         return recognizer
     }()
@@ -34,11 +32,9 @@ class MoveBoxVC: UIViewController {
         let translation = recognizer.translation(in: piece.superview)
         
         switch recognizer.state {
-        case .began:
-            initialCenter = piece.center
-        case .changed:
-            let newCenter = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
-            piece.center = newCenter
+        case .began, .changed:
+            piece.center = CGPoint(x: piece.center.x + translation.x, y: piece.center.y + translation.y)
+            recognizer.setTranslation(.zero, in: piece)
         case .ended:
             print("ended translation \(translation)")
         default:
