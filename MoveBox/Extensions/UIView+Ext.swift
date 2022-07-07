@@ -10,6 +10,8 @@ import UIKit
 private let size: CGFloat = 100
 
 extension UIView {
+ 
+    // MARK: - MoveBoxVC
     
     func moveBoxSet(superview: UIView, view: UIImageView) {
         view.isUserInteractionEnabled = true
@@ -22,6 +24,8 @@ extension UIView {
             view.widthAnchor.constraint(equalToConstant: size)
         ])
     }
+    
+    // MARK: - PopUpVC
     
     func setPopUpImage(view: UIView, image: UIImageView) {
         view.addSubview(image)
@@ -44,8 +48,18 @@ extension UIView {
         NSLayoutConstraint.activate([
             popUpView.leadingAnchor.constraint(equalTo: superView.leadingAnchor),
             popUpView.trailingAnchor.constraint(equalTo: superView.trailingAnchor),
-            popUpView.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: 440),
-            popUpView.heightAnchor.constraint(equalToConstant: 600)
+            popUpView.bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: -80),
+            popUpView.heightAnchor.constraint(equalToConstant: 80)
         ])
+    }
+    
+    // MARK: - PublisherVC
+    
+    func setTableView(superview: UIView, tableView: UITableView, vc: UIViewController) {
+        superview.addSubview(tableView)
+        tableView.backgroundColor = .systemBackground
+        tableView.frame = superview.bounds
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CustomCell.publisherCell)
+        tableView.dataSource = vc as? PublisherVC
     }
 }

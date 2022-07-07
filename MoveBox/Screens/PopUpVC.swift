@@ -28,31 +28,15 @@ class PopUpVC: UIViewController {
         view.setPopUpView(superView: view, popUpView: popUpView, recognizer: tapRecognizer)
     }
     
-//    func setPopUpView() {
-//        view.addSubview(popUpView)
-//        popUpView.addGestureRecognizer(tapRecognizer)
-//        bottomConstraint = popUpView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 440)
-//        popUpView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        NSLayoutConstraint.activate([
-//            popUpView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            popUpView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            bottomConstraint,
-//            popUpView.heightAnchor.constraint(equalToConstant: 600)
-//        ])
-//    }
-    
     @objc private func popUpViewTapped(recognizer: UITapGestureRecognizer) {
         guard recognizer.view != nil else { return }
-                
-           if recognizer.state == .ended {
-              let animator = UIViewPropertyAnimator(duration: 0.2, curve: .easeInOut, animations: {
-                  recognizer.view!.center.y -= 300
-              })
-              animator.startAnimation()
-               
-           }
-
+        
+        if recognizer.state == .ended {
+            let animator = UIViewPropertyAnimator(duration: 0.2, curve: .easeInOut, animations: {
+                recognizer.view!.center.y -= 300
+            })
+            animator.startAnimation()
+        }
     }
     
 }

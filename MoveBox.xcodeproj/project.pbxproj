@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC0A213F2875A9DE0099E98F /* PublisherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A213E2875A9DE0099E98F /* PublisherVC.swift */; };
+		BC0A215128771E940099E98F /* KVObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A215028771E940099E98F /* KVObserving.swift */; };
+		BC0A2153287724010099E98F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A2152287724010099E98F /* User.swift */; };
+		BC0A2156287724A10099E98F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A2155287724A10099E98F /* NetworkManager.swift */; };
 		BCD2DD332870A412007889E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD322870A412007889E6 /* AppDelegate.swift */; };
 		BCD2DD352870A412007889E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD342870A412007889E6 /* SceneDelegate.swift */; };
 		BCD2DD372870A412007889E6 /* MoveBoxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD2DD362870A412007889E6 /* MoveBoxVC.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC0A213E2875A9DE0099E98F /* PublisherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherVC.swift; sourceTree = "<group>"; };
+		BC0A215028771E940099E98F /* KVObserving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVObserving.swift; sourceTree = "<group>"; };
+		BC0A2152287724010099E98F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BC0A2155287724A10099E98F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BCD2DD2F2870A412007889E6 /* MoveBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD2DD322870A412007889E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCD2DD342870A412007889E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +55,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC0A2154287724060099E98F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC0A2152287724010099E98F /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC0A2157287724DF0099E98F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BC0A2155287724A10099E98F /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		BCD2DD262870A412007889E6 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +90,8 @@
 		BCD2DD312870A412007889E6 /* MoveBox */ = {
 			isa = PBXGroup;
 			children = (
+				BC0A2157287724DF0099E98F /* Managers */,
+				BC0A2154287724060099E98F /* Models */,
 				BCD2DD552871D393007889E6 /* Screens */,
 				BCD2DD562871D3BD007889E6 /* Custom Views */,
 				BCD2DD592871D482007889E6 /* Extensions */,
@@ -92,6 +118,8 @@
 			children = (
 				BCD2DD362870A412007889E6 /* MoveBoxVC.swift */,
 				BCD2DD502871C66C007889E6 /* PopUpVC.swift */,
+				BC0A213E2875A9DE0099E98F /* PublisherVC.swift */,
+				BC0A215028771E940099E98F /* KVObserving.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -219,10 +247,14 @@
 				BCD2DD472870A905007889E6 /* UIView+Ext.swift in Sources */,
 				BCD2DD4F2871C588007889E6 /* CustomTabBarController.swift in Sources */,
 				BCD2DD492870AACA007889E6 /* GenericImageView.swift in Sources */,
+				BC0A2156287724A10099E98F /* NetworkManager.swift in Sources */,
+				BC0A213F2875A9DE0099E98F /* PublisherVC.swift in Sources */,
 				BCD2DD372870A412007889E6 /* MoveBoxVC.swift in Sources */,
 				BCD2DD332870A412007889E6 /* AppDelegate.swift in Sources */,
 				BCD2DD5C2871E657007889E6 /* PopUpView.swift in Sources */,
 				BCD2DD512871C66C007889E6 /* PopUpVC.swift in Sources */,
+				BC0A2153287724010099E98F /* User.swift in Sources */,
+				BC0A215128771E940099E98F /* KVObserving.swift in Sources */,
 				BCD2DD352870A412007889E6 /* SceneDelegate.swift in Sources */,
 				BCD2DD4B2870AAF1007889E6 /* Constants.swift in Sources */,
 			);
