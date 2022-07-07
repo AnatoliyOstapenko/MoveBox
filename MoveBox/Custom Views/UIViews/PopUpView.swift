@@ -9,7 +9,7 @@ import UIKit
 
 class PopUpView: UIView {
     
-    let popUpImage = GenericImageView(image: .popUpImage)
+    let popUpImage = GenericImageView(image: .keyImage)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,7 +21,7 @@ class PopUpView: UIView {
     }
     
     private func configure() {
-        backgroundColor = .systemPink
+        backgroundColor = .secondarySystemBackground
         setPopUpImage(view: self, image: popUpImage)
     }
     

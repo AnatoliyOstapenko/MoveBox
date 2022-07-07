@@ -12,9 +12,10 @@ enum State { case open, closed }
 class PopUpVC: UIViewController {
     
     let popUpView = PopUpView(frame: .zero)
+    let lockImageView = GenericImageView(image: .lockImage)
     
-    private lazy var tapRecognizer: UITapGestureRecognizer = {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(popUpViewTapped(recognizer:)))
+    private lazy var tapRecognizer: UIPanGestureRecognizer = {
+        let tap = UIPanGestureRecognizer(target: self, action: #selector(popUpViewTapped(recognizer:)))
         return tap
     }()
     
@@ -26,17 +27,14 @@ class PopUpVC: UIViewController {
     private func configure() {
         view.backgroundColor = .secondarySystemBackground
         view.setPopUpView(superView: view, popUpView: popUpView, recognizer: tapRecognizer)
+        view.setLockImageView(superview: view, imageView: lockImageView)
     }
     
-    @objc private func popUpViewTapped(recognizer: UITapGestureRecognizer) {
-        guard recognizer.view != nil else { return }
+    @objc private func popUpViewTapped(recognizer: UIPanGestureRecognizer) {
+        guard let piece = recognizer.view else { return }
         
-        if recognizer.state == .ended {
-            let animator = UIViewPropertyAnimator(duration: 0.2, curve: .easeInOut, animations: {
-                recognizer.view!.center.y -= 300
-            })
-            animator.startAnimation()
-        }
+        
+        
     }
     
 }

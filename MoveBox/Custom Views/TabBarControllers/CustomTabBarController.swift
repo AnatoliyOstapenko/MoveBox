@@ -35,7 +35,7 @@ class CustomTabBarController: UITabBarController {
     private func createPublisherNV() -> UINavigationController {
         let vc = PublisherVC()
         vc.title = TabBarTitles.publisher
-        vc.tabBarItem = UITabBarItem(title: TabBarTitles.publisher, image: GenericImageView(image: .combine).image, tag: 1)
+        vc.tabBarItem = UITabBarItem(title: TabBarTitles.publisher, image: GenericImageView(image: .combineImage).image, tag: 1)
         return UINavigationController(rootViewController: vc)
     }
   

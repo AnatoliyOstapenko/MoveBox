@@ -10,8 +10,9 @@ import UIKit
 
 enum SFSymbols {
     static let boxImage = UIImage(systemName: "shippingbox")
-    static let ejectImage = UIImage(systemName: "eject")
+    static let keyImage = UIImage(systemName: "key.viewfinder")
     static let combineImage = UIImage(systemName: "comb")
+    static let lockImage = UIImage(systemName: "lock")
 }
 
 enum TabBarTitles {
