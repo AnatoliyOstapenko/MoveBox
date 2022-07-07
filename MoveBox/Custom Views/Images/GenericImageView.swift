@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Image { case boxImage, keyImage, combineImage, lockImage }
+enum Image { case boxImage, keyImage, combineImage, lockImage, unlock }
 
 class GenericImageView: UIImageView {
 
@@ -40,6 +40,8 @@ class GenericImageView: UIImageView {
             self.image = SFSymbols.combineImage
         case .lockImage:
             self.image = SFSymbols.lockImage
+        case .unlock:
+            self.image = SFSymbols.unlockImage
         }
     }
     

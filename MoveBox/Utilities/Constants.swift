@@ -13,6 +13,7 @@ enum SFSymbols {
     static let keyImage = UIImage(systemName: "key.viewfinder")
     static let combineImage = UIImage(systemName: "comb")
     static let lockImage = UIImage(systemName: "lock")
+    static let unlockImage = UIImage(systemName: "lock.open")
 }
 
 enum TabBarTitles {

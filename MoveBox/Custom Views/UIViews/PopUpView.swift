@@ -9,7 +9,7 @@ import UIKit
 
 class PopUpView: UIView {
     
-    let popUpImage = GenericImageView(image: .keyImage)
+    var popUpImage = GenericImageView(image: .keyImage)
 
     override init(frame: CGRect) {
         super.init(frame: frame)

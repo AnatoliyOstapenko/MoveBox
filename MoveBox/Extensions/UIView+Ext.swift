@@ -40,10 +40,11 @@ extension UIView {
         ])
     }
     
-    func setPopUpView(superView: UIView, view: UIView) {
+    func setPopUpView(superView: UIView, view: UIView, origin: CGPoint) {
         view.isUserInteractionEnabled = true // user interaction doesn't work by default 🤯
         view.backgroundColor = UIColor(white: 0, alpha: 0) // make view transparent
         superView.addSubview(view)
+        print("in viewWill : \(view.frame.origin)")
         view.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
