@@ -23,7 +23,7 @@ class KVObserving: UIViewController {
     }
     
     private func configure() {
-        
+        view.backgroundColor = .systemBackground
         // swiftImageView
         view.addSubview(swiftImageView)
         NSLayoutConstraint.activate([

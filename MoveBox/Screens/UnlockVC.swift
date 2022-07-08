@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class UnlockVC: UIViewController {
     
     var popUpView = PopUpView(frame: .zero)
@@ -29,6 +30,8 @@ class UnlockVC: UIViewController {
         view.setLockImageView(superview: view, imageView: lockImageView)
         view.bringSubviewToFront(popUpView)
         popUpView.addGestureRecognizer(panRecognizer)
+        lockImageView.image = SFSymbols.lockImage
+        
     }
     
     @objc private func unlockPan(_ recognizer: UIPanGestureRecognizer) {
@@ -41,11 +44,30 @@ class UnlockVC: UIViewController {
         case .changed:
             piece.center = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
         case .ended:
-            piece.center = initialCenter
+            if piece.frame.intersects(lockImageView.frame) {
+                unlocking(piece)
+            } else {
+                originState(piece)
+            }
         default:
             break
         }
+    }
+    
+    func unlocking(_ piece: UIView) {
+        DispatchQueue.main.async {
+            self.lockImageView.image = SFSymbols.unlockImage
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+            let vc = KVObserving()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         
+    }
+
+    
+    func originState(_ piece: UIView) {
+        UIView.animate(withDuration: 0.5) { piece.center = self.initialCenter }
     }
     
 }
