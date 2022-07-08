@@ -11,49 +11,40 @@ class UnlockVC: UIViewController {
     
     var popUpView = PopUpView(frame: .zero)
     var lockImageView = GenericImageView(image: .lockImage)
-    var cutomOrigin = CGPoint()
+    var initialCenter = CGPoint()
     
     private lazy var panRecognizer: UIPanGestureRecognizer = {
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(unlockPan(recognizer:)))
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(unlockPan(_:)))
         return pan
     }()
     
-    override func viewDidLoad() {
-        configure()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         configure()
-
     }
 
     private func configure() {
-        cutomOrigin = popUpView.frame.origin
         view.backgroundColor = .secondarySystemBackground
-        view.setPopUpView(superView: view, view: popUpView, origin: cutomOrigin)
+        view.setPopUpView(superView: view, view: popUpView)
         view.setLockImageView(superview: view, imageView: lockImageView)
         view.bringSubviewToFront(popUpView)
         popUpView.addGestureRecognizer(panRecognizer)
     }
     
-    @objc private func unlockPan(recognizer: UIPanGestureRecognizer) {
+    @objc private func unlockPan(_ recognizer: UIPanGestureRecognizer) {
         guard let piece = recognizer.view else { return }
         let translation = recognizer.translation(in: piece.superview)
         
         switch recognizer.state {
-        case .began, .changed:
-            piece.center = CGPoint(x: piece.center.x + translation.x, y: piece.center.y + translation.y)
-            recognizer.setTranslation(.zero, in: piece)
+        case .began:
+            initialCenter = piece.center
+        case .changed:
+            piece.center = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
         case .ended:
-            popUpView.frame.origin = cutomOrigin
-                
-            
+            piece.center = initialCenter
         default:
             break
         }
-        
         
     }
     

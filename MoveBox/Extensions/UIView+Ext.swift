@@ -8,6 +8,7 @@
 import UIKit
 
 private let size: CGFloat = 100
+var origin: CGFloat!
 
 extension UIView {
  
@@ -40,11 +41,10 @@ extension UIView {
         ])
     }
     
-    func setPopUpView(superView: UIView, view: UIView, origin: CGPoint) {
+    func setPopUpView(superView: UIView, view: UIView) {
         view.isUserInteractionEnabled = true // user interaction doesn't work by default 🤯
         view.backgroundColor = UIColor(white: 0, alpha: 0) // make view transparent
         superView.addSubview(view)
-        print("in viewWill : \(view.frame.origin)")
         view.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([

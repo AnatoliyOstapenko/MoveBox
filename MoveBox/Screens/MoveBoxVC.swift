@@ -36,7 +36,7 @@ class MoveBoxVC: UIViewController {
             piece.center = CGPoint(x: piece.center.x + translation.x, y: piece.center.y + translation.y)
             recognizer.setTranslation(.zero, in: piece)
         case .ended:
-            print("ended translation \(translation)")
+            print("ended CGPoint of piece \(piece.center)")
         default:
             break
         }
