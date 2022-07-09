@@ -10,7 +10,7 @@ import UIKit
 
 class UnlockVC: UIViewController {
     
-    var popUpView = PopUpView(frame: .zero)
+    var keyView = CustomView(frame: .zero)
     var lockImageView = GenericImageView(image: .lockImage)
     var initialCenter = CGPoint()
     
@@ -26,10 +26,10 @@ class UnlockVC: UIViewController {
 
     private func configure() {
         view.backgroundColor = .secondarySystemBackground
-        view.setPopUpView(superView: view, view: popUpView)
+        view.setPopUpView(superView: view, view: keyView)
         view.setLockImageView(superview: view, imageView: lockImageView)
-        view.bringSubviewToFront(popUpView)
-        popUpView.addGestureRecognizer(panRecognizer)
+        view.bringSubviewToFront(keyView)
+        keyView.addGestureRecognizer(panRecognizer)
         lockImageView.image = SFSymbols.lockImage
         
     }
@@ -64,7 +64,6 @@ class UnlockVC: UIViewController {
         }
         
     }
-
     
     func originState(_ piece: UIView) {
         UIView.animate(withDuration: 0.5) { piece.center = self.initialCenter }

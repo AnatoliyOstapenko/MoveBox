@@ -14,6 +14,7 @@ enum SFSymbols {
     static let combineImage = UIImage(systemName: "comb")
     static let lockImage = UIImage(systemName: "lock")
     static let unlockImage = UIImage(systemName: "lock.open")
+    static let swift = UIImage(systemName: "swift")
 }
 
 enum TabBarTitles {
@@ -28,4 +29,11 @@ enum CustomCell {
 
 enum URLString {
     static let url = URL(string: "https://jsonplaceholder.typicode.com/users")
+}
+
+enum CustomText {
+    static let text = "Text"
+    static let name = "Name"
+    static let action = "Update Name"
+    static let placeholder = "Enter..."
 }

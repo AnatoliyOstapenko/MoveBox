@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PopUpView: UIView {
+class CustomView: UIView {
     
     var popUpImage = GenericImageView(image: .keyImage)
 

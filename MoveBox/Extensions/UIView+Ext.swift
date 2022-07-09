@@ -8,7 +8,7 @@
 import UIKit
 
 private let size: CGFloat = 100
-var origin: CGFloat!
+private let padding: CGFloat = 12
 
 extension UIView {
  
@@ -26,7 +26,7 @@ extension UIView {
         ])
     }
     
-    // MARK: - PopUpVC
+    // MARK: - UnlockVC
     
     func setPopUpImage(view: UIView, image: UIImageView) {
         view.addSubview(image)
@@ -79,17 +79,58 @@ extension UIView {
     }
     
     // MARK: - KVObserving
+
+    func setTopStackView(superview: UIView, stackView: UIStackView, textField: UITextField, label: UILabel) {
+        superview.addSubview(stackView)
+        stackView.addArrangedSubview(textField)
+        stackView.addArrangedSubview(label)
+
+        NSLayoutConstraint.activate([
+            stackView.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
+            stackView.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding),
+            stackView.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding),
+            stackView.heightAnchor.constraint(equalToConstant: padding * 6)
+            
+        ])
+    }
+    
+    func setBottomStackView(superview: UIView, stackView: UIStackView, button: UIButton, label: UILabel, topStackView: UIStackView) {
+        superview.addSubview(stackView)
+        stackView.addArrangedSubview(label)
+        stackView.addArrangedSubview(button)
+
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: padding),
+            stackView.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding),
+            stackView.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding),
+            stackView.heightAnchor.constraint(equalToConstant: padding * 6)
+            
+        ])
+    }
+    
+    func setSwiftView(superview: UIView, view: UIView, stackView: UIStackView) {
+        superview.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: superview.topAnchor),
+            view.bottomAnchor.constraint(equalTo: stackView.topAnchor),
+            view.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor)
+        ])
+    }
     
     func setSwiftImageView(superview: UIView, imageView: UIImageView) {
-        imageView.backgroundColor = .yellow
         superview.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: superview.topAnchor, constant: 80),
             imageView.centerXAnchor.constraint(equalTo: superview.centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 100),
+            imageView.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: size),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
         ])
     }
+    
+    
 }
