@@ -24,7 +24,6 @@ class KVObserving: UIViewController {
     
     @objc let objectToObserve = Person()
     var observation: NSKeyValueObservation?
-    @objc dynamic var dynamicText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +33,11 @@ class KVObserving: UIViewController {
     }
     
     private func observerHandling() {
-         observation = observe(\.objectToObserve.name, options: [.old, .new]) { object , change in
+         observation = observe(\.objectToObserve.name, options: [.old, .new]) { _ , change in
             guard let newName = change.newValue, let oldName = change.oldValue else { return }
             print("name changed from: \(oldName), updated to: \(newName)")
             self.nameLabel.text = newName
         }
-    }
-    
-    private func secondObserverHandling() {
-        //observation
     }
     
     private func configure() {
