@@ -141,7 +141,7 @@
 				BCE16BD528786FE100F4AE99 /* UIStackViews */,
 				BCE16BD828787C5F00F4AE99 /* UIButtons */,
 				BCE16BFF2879AAAC00F4AE99 /* UILabels */,
-				BCE16C002879B2A300F4AE99 /* CustomTextField.swift */,
+				BCE16C022879B5D700F4AE99 /* UITextFields */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -208,6 +208,14 @@
 				BCE16BFD2879AAA300F4AE99 /* CustomLabel.swift */,
 			);
 			path = UILabels;
+			sourceTree = "<group>";
+		};
+		BCE16C022879B5D700F4AE99 /* UITextFields */ = {
+			isa = PBXGroup;
+			children = (
+				BCE16C002879B2A300F4AE99 /* CustomTextField.swift */,
+			);
+			path = UITextFields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

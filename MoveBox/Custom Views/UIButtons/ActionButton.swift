@@ -18,9 +18,8 @@ class ActionButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(text: String, backgroundColor: UIColor) {
+    convenience init(text: String) {
         self.init(frame: .zero)
-        self.backgroundColor = backgroundColor
         self.setTitle(text, for: .normal)
     }
     
@@ -28,6 +27,7 @@ class ActionButton: UIButton {
         layer.cornerRadius = 10
         setTitleColor(.white, for: .normal)
         titleLabel?.font = .preferredFont(forTextStyle: .headline)
+        backgroundColor = .systemBlue
         translatesAutoresizingMaskIntoConstraints = false
     }
     

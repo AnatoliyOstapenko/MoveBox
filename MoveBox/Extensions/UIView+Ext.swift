@@ -87,8 +87,8 @@ extension UIView {
 
         NSLayoutConstraint.activate([
             stackView.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
-            stackView.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding),
-            stackView.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding),
+            stackView.leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor, constant: padding),
+            stackView.trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: -padding),
             stackView.heightAnchor.constraint(equalToConstant: padding * 6)
             
         ])
@@ -101,8 +101,8 @@ extension UIView {
 
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: padding),
-            stackView.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding),
-            stackView.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding),
+            stackView.leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor, constant: padding),
+            stackView.trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: -padding),
             stackView.heightAnchor.constraint(equalToConstant: padding * 6)
             
         ])

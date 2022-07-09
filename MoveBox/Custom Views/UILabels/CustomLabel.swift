@@ -27,7 +27,7 @@ class CustomLabel: UILabel {
         textColor = .label
         textAlignment = .center
         layer.cornerRadius = 10
-        layer.borderColor = UIColor.systemPink.cgColor
+        layer.borderColor = UIColor.systemBlue.cgColor
         layer.borderWidth = 2
         font = .preferredFont(forTextStyle: .headline)
         adjustsFontSizeToFitWidth = true

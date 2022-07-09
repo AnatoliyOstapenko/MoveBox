@@ -24,7 +24,7 @@ class PublisherVC: UIViewController {
         observerHandling()
     }
     
-    func observerHandling() {
+    private func observerHandling() {
         observer = NetworkManager.shared.fetchUsers()
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] users in

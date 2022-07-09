@@ -25,9 +25,10 @@ class CustomTextField: UITextField {
     
     private func configure() {
         layer.cornerRadius = 10
-        layer.borderColor = UIColor.systemPink.cgColor
+        layer.borderColor = UIColor.systemBlue.cgColor
         layer.borderWidth = 2
-        font = .preferredFont(forTextStyle: .caption2)
+        textAlignment = .center
+        font = .preferredFont(forTextStyle: .headline)
         adjustsFontSizeToFitWidth = true
         minimumFontSize = 7
         translatesAutoresizingMaskIntoConstraints = false
