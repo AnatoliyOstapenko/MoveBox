@@ -26,6 +26,7 @@
 		BCE16BD728787C5B00F4AE99 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE16BD628787C5B00F4AE99 /* ActionButton.swift */; };
 		BCE16BFE2879AAA300F4AE99 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE16BFD2879AAA300F4AE99 /* CustomLabel.swift */; };
 		BCE16C012879B2A300F4AE99 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE16C002879B2A300F4AE99 /* CustomTextField.swift */; };
+		BCE16C26287B3DD800F4AE99 /* CombineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE16C25287B3DD800F4AE99 /* CombineVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		BCE16BD628787C5B00F4AE99 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		BCE16BFD2879AAA300F4AE99 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		BCE16C002879B2A300F4AE99 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		BCE16C25287B3DD800F4AE99 /* CombineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				BCD2DD502871C66C007889E6 /* UnlockVC.swift */,
 				BC0A213E2875A9DE0099E98F /* PublisherVC.swift */,
 				BC0A215028771E940099E98F /* KVObserving.swift */,
+				BCE16C25287B3DD800F4AE99 /* CombineVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				BC0A215128771E940099E98F /* KVObserving.swift in Sources */,
 				BCD2DD352870A412007889E6 /* SceneDelegate.swift in Sources */,
 				BCD2DD4B2870AAF1007889E6 /* Constants.swift in Sources */,
+				BCE16C26287B3DD800F4AE99 /* CombineVC.swift in Sources */,
 				BCE16BD728787C5B00F4AE99 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

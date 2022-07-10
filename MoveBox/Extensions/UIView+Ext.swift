@@ -122,6 +122,7 @@ extension UIView {
     
     func setSwiftImageView(superview: UIView, imageView: UIImageView) {
         superview.addSubview(imageView)
+        imageView.isUserInteractionEnabled = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -129,6 +130,19 @@ extension UIView {
             imageView.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
             imageView.heightAnchor.constraint(equalToConstant: size),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
+        ])
+    }
+    
+    func setSecretButton(superview: UIView, button: UIButton, imageView: UIImageView) {
+        button.backgroundColor = .systemPink
+        button.titleLabel?.font = .preferredFont(forTextStyle: .body)
+        superview.addSubview(button)
+        
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: imageView.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
+            button.heightAnchor.constraint(equalToConstant: 50),
+            button.widthAnchor.constraint(equalToConstant: 50)
         ])
     }
     
