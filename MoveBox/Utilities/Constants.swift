@@ -38,4 +38,6 @@ enum CustomText {
     static let name = "Name"
     static let action = "Update Name"
     static let placeholder = "Enter..."
+    static let delegatePattern = "Delegate Protocol Pattern"
+    static let observerPattern = "Observer & Notification Pattern"
 }

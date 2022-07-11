@@ -146,5 +146,21 @@ extension UIView {
         ])
     }
     
+    // MARK: - PatternVC
+    
+    func setPatternStackView(superview: UIView, stack: UIStackView, topButton: UIButton, bottomButton: UIButton) {
+        superview.addSubview(stack)
+        stack.addArrangedSubview(topButton)
+        stack.addArrangedSubview(bottomButton)
+        stack.axis = .vertical
+        
+        NSLayoutConstraint.activate([
+            stack.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding * 4),
+            stack.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding * 4),
+            stack.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
+            stack.heightAnchor.constraint(equalToConstant: 120)
+
+        ])
+    }
     
 }
