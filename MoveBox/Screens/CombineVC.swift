@@ -54,6 +54,11 @@ class CombineVC: UIViewController {
         view.backgroundColor = .systemBackground
         view.setTopStackView(superview: view, stackView: topStackView, textField: blogTextField, label: subscribeLabel)
         view.setBottomStackView(superview: view, stackView: bottomStackView, button: publishButton, label: subscribeLabel, topStackView: topStackView)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped))
+    }
+    
+    @objc func cancelTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
     }
 
 }

@@ -15,12 +15,14 @@ enum SFSymbols {
     static let lockImage = UIImage(systemName: "lock")
     static let unlockImage = UIImage(systemName: "lock.open")
     static let swift = UIImage(systemName: "swift")
+    static let pattern = UIImage(systemName: "briefcase")
 }
 
 enum TabBarTitles {
     static let moveBox = "Move Box"
     static let popUp = "Pop Up"
     static let publisher = "Publisher"
+    static let pattern = "Pattern"
 }
 
 enum CustomCell {

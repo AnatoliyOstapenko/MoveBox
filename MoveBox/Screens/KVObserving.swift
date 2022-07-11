@@ -54,7 +54,6 @@ class KVObserving: UIViewController {
         view.setSwiftView(superview: view, view: swiftView, stackView: topStack)
         view.setSwiftImageView(superview: swiftView, imageView: swiftImageView)
         view.setSecretButton(superview: swiftView, button: secretButton, imageView: swiftImageView)
-        
     }
     
     func setActions() {
@@ -63,7 +62,7 @@ class KVObserving: UIViewController {
         swiftImageView.addGestureRecognizer(tapGestureRecognizer)
         secretButton.addTarget(self, action: #selector(secretButtonPressed), for: .touchUpInside)
     }
-    
+
     @objc func actionButtonPressed() {
         objectToObserve.name = "John Connor"
     }
@@ -74,7 +73,8 @@ class KVObserving: UIViewController {
     
     @objc func secretButtonPressed() {
         let vc = CombineVC()
-        navigationController?.pushViewController(vc, animated: true)
+        let navController = UINavigationController(rootViewController: vc)
+        self.present(navController, animated: true)
     }
     
     @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
@@ -83,7 +83,7 @@ class KVObserving: UIViewController {
             let animator = UIViewPropertyAnimator(duration: 0.8, curve: .easeInOut) {
                 piece.center.y -= 80
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(800)) {
                     self.secretButton.isHidden = false
                 }
             }

@@ -15,7 +15,7 @@ class CustomTabBarController: UITabBarController {
     }
     
     private func setTabBar() {
-        viewControllers = [createLeftNV(), createPublisherNV(), createRightNV()]
+        viewControllers = [createLeftNV(), createPublisherNV(), createRightNV(), createPattern()]
     }
     
     private func createLeftNV()  -> UINavigationController {
@@ -37,6 +37,14 @@ class CustomTabBarController: UITabBarController {
         vc.title = TabBarTitles.publisher
         vc.tabBarItem = UITabBarItem(title: TabBarTitles.publisher, image: GenericImageView(image: .combineImage).image, tag: 1)
         return UINavigationController(rootViewController: vc)
+    }
+    
+    private func createPattern() -> UINavigationController {
+        let vc = PatternVC()
+        vc.title = "Delegate Pattern"
+        vc.tabBarItem = UITabBarItem(title: TabBarTitles.pattern, image: SFSymbols.pattern, tag: 3)
+        return UINavigationController(rootViewController: vc)
+        
     }
   
 }
