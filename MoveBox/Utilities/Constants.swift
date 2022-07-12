@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+public let upNotificationKey = "notification__up"
+public let downNotificationKey = "notification__down"
+
 enum SFSymbols {
     static let boxImage = UIImage(systemName: "shippingbox")
     static let keyImage = UIImage(systemName: "key.viewfinder")
@@ -43,4 +46,7 @@ enum CustomText {
     static let placeholder = "Enter..."
     static let delegatePattern = "Delegate Protocol Pattern"
     static let observerPattern = "Observer & Notification Pattern"
+    static let pattern = "Choose a pattern"
+    static let up = "👆 Delegate label chosen"
+    static let down = "👇 Delegate label chosen"
 }

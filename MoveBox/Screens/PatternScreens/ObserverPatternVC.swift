@@ -15,12 +15,14 @@ class ObserverPatternVC: AbstractPatternVC {
     }
     
     override func topLabelTapped(_ recognizer: UITapGestureRecognizer) {
-        print("⬆︎ Observer label chosen")
+        let name = Notification.Name(upNotificationKey)
+        NotificationCenter.default.post(name: name, object: nil)
         rollBack()
     }
     
     override func bottomLabelTapped(_ recognizer: UITapGestureRecognizer) {
-        print("⬇︎ Observer label chosen")
+        let name = Notification.Name(downNotificationKey)
+        NotificationCenter.default.post(name: name, object: nil)
         rollBack()
     }
     

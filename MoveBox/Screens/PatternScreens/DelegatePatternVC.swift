@@ -25,12 +25,12 @@ class DelegatePatternVC: AbstractPatternVC {
     }
     
     override func topLabelTapped(_ recognizer: UITapGestureRecognizer) {
-        delegate?.updateUI(imageView: topImageView, textLabel: "👆 Delegate label chosen")
+        delegate?.updateUI(imageView: topImageView, textLabel: CustomText.up)
         rollBack()
     }
     
     override func bottomLabelTapped(_ recognizer: UITapGestureRecognizer) {
-        delegate?.updateUI(imageView: bottomImageView, textLabel: "👇 Delegate label chosen")
+        delegate?.updateUI(imageView: bottomImageView, textLabel: CustomText.down)
         rollBack()
     }
     

@@ -12,13 +12,43 @@ class PatternVC: UIViewController {
     private let stackView = CustomStackView(frame: .zero)
     private let delegateButton = ActionButton(text: CustomText.delegatePattern)
     private let observerButton = ActionButton(text: CustomText.observerPattern)
-    var patternLabel = CustomLabel(text: "Choose the pattern")
+    private var patternLabel = CustomLabel(text: CustomText.pattern)
     private var questionImageView = CustomImageView(image: .question)
+    
+    private let up = Notification.Name(upNotificationKey)
+    private let down = Notification.Name(downNotificationKey)
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         actions()
+        createObservers()
+    }
+    
+    func createObservers() {
+        // Observe the up label chosen
+        NotificationCenter.default.addObserver(self, selector: #selector(updatePatternLabel(_:)), name: up, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateQuestionImageView(_:)), name: up, object: nil)
+        
+        // Observe the down label chosen
+        NotificationCenter.default.addObserver(self, selector: #selector(updatePatternLabel(_:)), name: down, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateQuestionImageView(_:)), name: down, object: nil)
+    }
+    
+    @objc func updatePatternLabel(_ notification: NSNotification) {
+        let isUp = notification.name == up
+        let textLabel = isUp ? CustomText.up : CustomText.down
+        patternLabel.text = textLabel
+    }
+    
+    @objc func updateQuestionImageView(_ notification: NSNotification) {
+        let isUp = notification.name == up
+        let image = isUp ? SFSymbols.up : SFSymbols.down
+        questionImageView.image = image
     }
     
     private func configure() {
@@ -38,7 +68,8 @@ class PatternVC: UIViewController {
             vc.delegate = self
             navigationController?.pushViewController(vc, animated: true)
         } else {
-            print("TBD")
+            let vc = ObserverPatternVC()
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
