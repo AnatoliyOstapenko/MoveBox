@@ -12,7 +12,7 @@ class PatternVC: UIViewController {
     private let stackView = CustomStackView(frame: .zero)
     private let delegateButton = ActionButton(text: CustomText.delegatePattern)
     private let observerButton = ActionButton(text: CustomText.observerPattern)
-    var patternLabel = CustomLabel(text: "TBD")
+    var patternLabel = CustomLabel(text: "Choose the pattern")
     private var questionImageView = CustomImageView(image: .question)
 
     override func viewDidLoad() {
@@ -33,10 +33,23 @@ class PatternVC: UIViewController {
     }
     
     @objc func buttonPressed(_ sender: UIButton) {
-       let vc = sender.titleLabel?.text == CustomText.delegatePattern ? DelegatePatternVC() : ObserverPatternVC()
-        navigationController?.pushViewController(vc, animated: true)
+        if sender.titleLabel?.text == CustomText.delegatePattern {
+            let vc = DelegatePatternVC()
+            vc.delegate = self
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            print("TBD")
+        }
+    }
+}
+
+extension PatternVC: DelegatePatternProtocol {
+    func updateUI(imageView: CustomImageView, textLabel: String) {
+        questionImageView.image = imageView.image
+        patternLabel.text = textLabel
     }
     
-
+    
+    
 }
 

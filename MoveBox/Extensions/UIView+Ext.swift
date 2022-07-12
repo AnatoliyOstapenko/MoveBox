@@ -183,6 +183,8 @@ extension UIView {
         stackView.spacing = 50
         stackView.addArrangedSubview(topImageView)
         stackView.addArrangedSubview(bottomImageView)
+        bottomImageView.isUserInteractionEnabled = true
+        topImageView.isUserInteractionEnabled = true
         
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding * 4),

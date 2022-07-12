@@ -7,10 +7,33 @@
 
 import UIKit
 
+protocol DelegatePatternProtocol: AnyObject {
+    func updateUI(imageView: CustomImageView, textLabel: String)
+}
+
 class DelegatePatternVC: AbstractPatternVC {
+    
+    weak var delegate: DelegatePatternProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+    
+    private func configure() {
         view.backgroundColor = .systemMint
     }
+    
+    override func topLabelTapped(_ recognizer: UITapGestureRecognizer) {
+        delegate?.updateUI(imageView: topImageView, textLabel: "👆 Delegate label chosen")
+        rollBack()
+    }
+    
+    override func bottomLabelTapped(_ recognizer: UITapGestureRecognizer) {
+        delegate?.updateUI(imageView: bottomImageView, textLabel: "👇 Delegate label chosen")
+        rollBack()
+    }
+    
+    func rollBack() { navigationController?.popViewController(animated: true) }
+  
 }

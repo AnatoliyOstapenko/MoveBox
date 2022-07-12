@@ -13,5 +13,17 @@ class ObserverPatternVC: AbstractPatternVC {
         super.viewDidLoad()
         view.backgroundColor = .systemPink
     }
+    
+    override func topLabelTapped(_ recognizer: UITapGestureRecognizer) {
+        print("⬆︎ Observer label chosen")
+        rollBack()
+    }
+    
+    override func bottomLabelTapped(_ recognizer: UITapGestureRecognizer) {
+        print("⬇︎ Observer label chosen")
+        rollBack()
+    }
+    
+    func rollBack() { navigationController?.popViewController(animated: true) }
 
 }

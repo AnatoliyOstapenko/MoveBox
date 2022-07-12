@@ -13,8 +13,13 @@ class AbstractPatternVC: UIViewController {
     let topImageView = CustomImageView(image: .up)
     let bottomImageView = CustomImageView(image: .down)
     
-    lazy var tapRecognizer: UITapGestureRecognizer = {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+    lazy var topTapRecognizer: UITapGestureRecognizer = {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(topLabelTapped(_:)))
+        return tap
+    }()
+    
+    lazy var downTapRecognizer: UITapGestureRecognizer = {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(bottomLabelTapped(_:)))
         return tap
     }()
 
@@ -26,9 +31,12 @@ class AbstractPatternVC: UIViewController {
     private func configure() {
         view.backgroundColor = .systemBackground
         view.setAbstractPatternVC(superview: view, stackView: patternStackView, topImageView: topImageView, bottomImageView: bottomImageView)
+        bottomImageView.addGestureRecognizer(downTapRecognizer)
+        topImageView.addGestureRecognizer(topTapRecognizer)
     }
 
     
-    @objc func labelTapped(_ recogniser: UITapGestureRecognizer) {}
+    @objc func topLabelTapped(_ recognizer: UITapGestureRecognizer) {}
+    @objc func bottomLabelTapped(_ recognizer: UITapGestureRecognizer) {}
 
 }
