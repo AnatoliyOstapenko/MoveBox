@@ -13,7 +13,7 @@ class Person: NSObject {
 
 class KVObserving: UIViewController {
     
-    let swiftImageView = GenericImageView(image: .swift)
+    let swiftImageView = CustomImageView(image: .swift)
     private let topStack = CustomStackView(frame: .zero)
     private let bottomStack = CustomStackView(frame: .zero)
     let swiftView = UIView()

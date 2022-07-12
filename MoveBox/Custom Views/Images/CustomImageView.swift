@@ -7,9 +7,9 @@
 
 import UIKit
 
-enum Image { case boxImage, keyImage, combineImage, lockImage, unlock, swift }
+enum Image { case boxImage, keyImage, combineImage, lockImage, unlock, swift, up, down, question }
 
-class GenericImageView: UIImageView {
+class CustomImageView: UIImageView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,6 +44,12 @@ class GenericImageView: UIImageView {
             self.image = SFSymbols.unlockImage
         case .swift:
             self.image = SFSymbols.swift
+        case .up:
+            self.image = SFSymbols.up
+        case .down:
+            self.image = SFSymbols.down
+        case .question:
+            self.image = SFSymbols.question
         }
     }
     

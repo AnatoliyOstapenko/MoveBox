@@ -9,7 +9,7 @@ import UIKit
 
 class MoveBoxVC: UIViewController {
     
-    var boxView = GenericImageView(image: .boxImage)
+    var boxView = CustomImageView(image: .boxImage)
     
     private lazy var panRecognizer: UIPanGestureRecognizer = {
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan(recognizer:)))

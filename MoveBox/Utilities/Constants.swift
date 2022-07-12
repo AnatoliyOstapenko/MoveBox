@@ -16,6 +16,9 @@ enum SFSymbols {
     static let unlockImage = UIImage(systemName: "lock.open")
     static let swift = UIImage(systemName: "swift")
     static let pattern = UIImage(systemName: "briefcase")
+    static let up = UIImage(systemName: "arrow.up.square")
+    static let down = UIImage(systemName: "arrow.down.square")
+    static let question = UIImage(systemName: "questionmark.square")
 }
 
 enum TabBarTitles {

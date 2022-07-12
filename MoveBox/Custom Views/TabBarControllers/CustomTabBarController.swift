@@ -21,21 +21,21 @@ class CustomTabBarController: UITabBarController {
     private func createLeftNV()  -> UINavigationController {
         let vc = MoveBoxVC()
         vc.title = TabBarTitles.moveBox
-        vc.tabBarItem = UITabBarItem(title: TabBarTitles.moveBox, image: GenericImageView(image: .boxImage).image, tag: 0)
+        vc.tabBarItem = UITabBarItem(title: TabBarTitles.moveBox, image: CustomImageView(image: .boxImage).image, tag: 0)
         return UINavigationController(rootViewController: vc)
     }
     
     private func createRightNV()  -> UINavigationController {
         let vc  = UnlockVC()
         vc.title = TabBarTitles.popUp
-        vc.tabBarItem = UITabBarItem(title: TabBarTitles.popUp, image: GenericImageView(image: .boxImage).image, tag: 2)
+        vc.tabBarItem = UITabBarItem(title: TabBarTitles.popUp, image: CustomImageView(image: .boxImage).image, tag: 2)
         return UINavigationController(rootViewController: vc)
     }
     
     private func createPublisherNV() -> UINavigationController {
         let vc = PublisherVC()
         vc.title = TabBarTitles.publisher
-        vc.tabBarItem = UITabBarItem(title: TabBarTitles.publisher, image: GenericImageView(image: .combineImage).image, tag: 1)
+        vc.tabBarItem = UITabBarItem(title: TabBarTitles.publisher, image: CustomImageView(image: .combineImage).image, tag: 1)
         return UINavigationController(rootViewController: vc)
     }
     

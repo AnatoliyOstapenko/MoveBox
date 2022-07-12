@@ -11,7 +11,7 @@ import UIKit
 class UnlockVC: UIViewController {
     
     var keyView = CustomView(frame: .zero)
-    var lockImageView = GenericImageView(image: .lockImage)
+    var lockImageView = CustomImageView(image: .lockImage)
     var initialCenter = CGPoint()
     
     private lazy var panRecognizer: UIPanGestureRecognizer = {

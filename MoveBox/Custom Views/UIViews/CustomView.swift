@@ -9,7 +9,7 @@ import UIKit
 
 class CustomView: UIView {
     
-    var popUpImage = GenericImageView(image: .keyImage)
+    var popUpImage = CustomImageView(image: .keyImage)
 
     override init(frame: CGRect) {
         super.init(frame: frame)

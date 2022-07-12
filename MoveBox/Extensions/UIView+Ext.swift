@@ -148,8 +148,9 @@ extension UIView {
     
     // MARK: - PatternVC
     
-    func setPatternStackView(superview: UIView, stack: UIStackView, topButton: UIButton, bottomButton: UIButton) {
+    func setPatternStackView(superview: UIView, label: UILabel, stack: UIStackView, topButton: UIButton, bottomButton: UIButton) {
         superview.addSubview(stack)
+        stack.addArrangedSubview(label)
         stack.addArrangedSubview(topButton)
         stack.addArrangedSubview(bottomButton)
         stack.axis = .vertical
@@ -158,7 +159,36 @@ extension UIView {
             stack.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding * 4),
             stack.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding * 4),
             stack.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
-            stack.heightAnchor.constraint(equalToConstant: 120)
+            stack.heightAnchor.constraint(equalToConstant: 200)
+
+        ])
+    }
+    
+    func setQuestionImage(superview: UIView, imageView: UIImageView, stackView: UIStackView) {
+        superview.addSubview(imageView)
+        
+        NSLayoutConstraint.activate([
+            imageView.centerXAnchor.constraint(equalTo: superview.centerXAnchor),
+            imageView.bottomAnchor.constraint(equalTo: stackView.topAnchor, constant: -padding),
+            imageView.heightAnchor.constraint(equalToConstant: 80),
+            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
+        ])
+    }
+    
+    // MARK: - AbstractPatternVC
+    
+    func setAbstractPatternVC(superview: UIView, stackView: UIStackView, topImageView: UIImageView, bottomImageView: UIImageView) {
+        superview.addSubview(stackView)
+        stackView.axis = .vertical
+        stackView.spacing = 50
+        stackView.addArrangedSubview(topImageView)
+        stackView.addArrangedSubview(bottomImageView)
+        
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding * 4),
+            stackView.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding * 4),
+            stackView.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
+            stackView.heightAnchor.constraint(equalToConstant: 300)
 
         ])
     }
