@@ -31,7 +31,19 @@
 		BCE16C57287CAD8300F4AE99 /* DelegatePatternVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE16C56287CAD8300F4AE99 /* DelegatePatternVC.swift */; };
 		BCE16C59287CAD9E00F4AE99 /* ObserverPatternVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE16C58287CAD9E00F4AE99 /* ObserverPatternVC.swift */; };
 		BCE16C5E287CB0BE00F4AE99 /* AbstractPatternVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE16C5D287CB0BE00F4AE99 /* AbstractPatternVC.swift */; };
+		BCE16C802882FFD800F4AE99 /* TDDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE16C7F2882FFD800F4AE99 /* TDDVC.swift */; };
+		BCE16C882883014E00F4AE99 /* MoveBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE16C872883014E00F4AE99 /* MoveBoxTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCE16C892883014E00F4AE99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCD2DD272870A412007889E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCD2DD2E2870A412007889E6;
+			remoteInfo = MoveBox;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BC0A213E2875A9DE0099E98F /* PublisherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherVC.swift; sourceTree = "<group>"; };
@@ -60,10 +72,20 @@
 		BCE16C56287CAD8300F4AE99 /* DelegatePatternVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatePatternVC.swift; sourceTree = "<group>"; };
 		BCE16C58287CAD9E00F4AE99 /* ObserverPatternVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverPatternVC.swift; sourceTree = "<group>"; };
 		BCE16C5D287CB0BE00F4AE99 /* AbstractPatternVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractPatternVC.swift; sourceTree = "<group>"; };
+		BCE16C7F2882FFD800F4AE99 /* TDDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDVC.swift; sourceTree = "<group>"; };
+		BCE16C852883014D00F4AE99 /* MoveBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoveBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE16C872883014E00F4AE99 /* MoveBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveBoxTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BCD2DD2C2870A412007889E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE16C822883014D00F4AE99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD2DD312870A412007889E6 /* MoveBox */,
+				BCE16C862883014E00F4AE99 /* MoveBoxTests */,
 				BCD2DD302870A412007889E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD2DD2F2870A412007889E6 /* MoveBox.app */,
+				BCE16C852883014D00F4AE99 /* MoveBoxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +163,7 @@
 				BC0A213E2875A9DE0099E98F /* PublisherVC.swift */,
 				BC0A215028771E940099E98F /* KVObserving.swift */,
 				BCE16C25287B3DD800F4AE99 /* CombineVC.swift */,
+				BCE16C7F2882FFD800F4AE99 /* TDDVC.swift */,
 				BCE16C5A287CADAA00F4AE99 /* PatternScreens */,
 			);
 			path = Screens;
@@ -241,6 +266,14 @@
 			path = PatternScreens;
 			sourceTree = "<group>";
 		};
+		BCE16C862883014E00F4AE99 /* MoveBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCE16C872883014E00F4AE99 /* MoveBoxTests.swift */,
+			);
+			path = MoveBoxTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +294,24 @@
 			productReference = BCD2DD2F2870A412007889E6 /* MoveBox.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BCE16C842883014D00F4AE99 /* MoveBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCE16C8B2883014E00F4AE99 /* Build configuration list for PBXNativeTarget "MoveBoxTests" */;
+			buildPhases = (
+				BCE16C812883014D00F4AE99 /* Sources */,
+				BCE16C822883014D00F4AE99 /* Frameworks */,
+				BCE16C832883014D00F4AE99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCE16C8A2883014E00F4AE99 /* PBXTargetDependency */,
+			);
+			name = MoveBoxTests;
+			productName = MoveBoxTests;
+			productReference = BCE16C852883014D00F4AE99 /* MoveBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -268,11 +319,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					BCD2DD2E2870A412007889E6 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					BCE16C842883014D00F4AE99 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = BCD2DD2E2870A412007889E6;
 					};
 				};
 			};
@@ -290,6 +345,7 @@
 			projectRoot = "";
 			targets = (
 				BCD2DD2E2870A412007889E6 /* MoveBox */,
+				BCE16C842883014D00F4AE99 /* MoveBoxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -301,6 +357,13 @@
 			files = (
 				BCD2DD3F2870A414007889E6 /* LaunchScreen.storyboard in Resources */,
 				BCD2DD3C2870A414007889E6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE16C832883014D00F4AE99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +392,7 @@
 				BCD2DD512871C66C007889E6 /* UnlockVC.swift in Sources */,
 				BC0A2153287724010099E98F /* User.swift in Sources */,
 				BC0A215128771E940099E98F /* KVObserving.swift in Sources */,
+				BCE16C802882FFD800F4AE99 /* TDDVC.swift in Sources */,
 				BCD2DD352870A412007889E6 /* SceneDelegate.swift in Sources */,
 				BCD2DD4B2870AAF1007889E6 /* Constants.swift in Sources */,
 				BCE16C26287B3DD800F4AE99 /* CombineVC.swift in Sources */,
@@ -336,7 +400,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCE16C812883014D00F4AE99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCE16C882883014E00F4AE99 /* MoveBoxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCE16C8A2883014E00F4AE99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCD2DD2E2870A412007889E6 /* MoveBox */;
+			targetProxy = BCE16C892883014E00F4AE99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BCD2DD3D2870A414007889E6 /* LaunchScreen.storyboard */ = {
@@ -520,6 +600,44 @@
 			};
 			name = Release;
 		};
+		BCE16C8C2883014E00F4AE99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K33FXWL25N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.AOS.MoveBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoveBox.app/MoveBox";
+			};
+			name = Debug;
+		};
+		BCE16C8D2883014E00F4AE99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K33FXWL25N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.AOS.MoveBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoveBox.app/MoveBox";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -537,6 +655,15 @@
 			buildConfigurations = (
 				BCD2DD442870A414007889E6 /* Debug */,
 				BCD2DD452870A414007889E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCE16C8B2883014E00F4AE99 /* Build configuration list for PBXNativeTarget "MoveBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE16C8C2883014E00F4AE99 /* Debug */,
+				BCE16C8D2883014E00F4AE99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

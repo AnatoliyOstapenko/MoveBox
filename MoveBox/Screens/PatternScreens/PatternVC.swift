@@ -18,15 +18,17 @@ class PatternVC: UIViewController {
     private let up = Notification.Name(upNotificationKey)
     private let down = Notification.Name(downNotificationKey)
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
+    deinit { NotificationCenter.default.removeObserver(self) }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
         actions()
         createObservers()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configure()
     }
     
     func createObservers() {
